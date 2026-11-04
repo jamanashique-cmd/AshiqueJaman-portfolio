@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ashique Jaman — Portfolio</title>
+  <meta name="description" content="Portfolio of Ashique Jaman.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Space+Grotesk:wght@500;700&family=Caveat:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ============ STICKER LIBRARY (reused with <use>) ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="bolt" viewBox="0 0 100 100">
+        <path d="M60 3 18 56h25l-7 41 46-58H57Z" fill="currentColor" stroke="var(--ink)" stroke-width="3"
+          stroke-linejoin="round" />
+      </symbol>
+      <symbol id="plus" viewBox="0 0 100 100">
+        <path d="M38 6h24v32h32v24H62v32H38V62H6V38h32Z" fill="currentColor" stroke="var(--ink)" stroke-width="3"
+          stroke-linejoin="round" />
+      </symbol>
+      <symbol id="gear" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="41" fill="none" stroke="var(--ink)" stroke-width="17" stroke-dasharray="7 5.57" />
+        <circle cx="50" cy="50" r="41" fill="none" stroke="currentColor" stroke-width="11" stroke-dasharray="7 5.57" />
+        <circle cx="50" cy="50" r="33" fill="currentColor" stroke="var(--ink)" stroke-width="3" />
+        <circle cx="50" cy="50" r="13" fill="var(--paper)" stroke="var(--ink)" stroke-width="3" />
+      </symbol>
+      <symbol id="clip" viewBox="0 0 60 120">
+        <path d="M20 40V92a10 10 0 0 0 20 0V24a16 16 0 0 0-32 0V96a22 22 0 0 0 44 0V44" fill="none"
+          stroke="var(--slate)" stroke-width="5" stroke-linecap="round" />
+      </symbol>
+      <symbol id="arrow" viewBox="0 0 160 80">
+        <path d="M6 60C40 6 90 4 140 40M140 40 118 36M140 40 134 18" fill="none" stroke="var(--ink)" stroke-width="3.5"
+          stroke-linecap="round" stroke-linejoin="round" />
+      </symbol>
+      <symbol id="squiggle" viewBox="0 0 140 30">
+        <path d="M4 15q12-18 24 0t24 0 24 0 24 0 24 0 12 0" fill="none" stroke="currentColor" stroke-width="4"
+          stroke-linecap="round" />
+      </symbol>
+      <symbol id="computer" viewBox="0 0 120 110">
+        <rect x="8" y="6" width="104" height="72" rx="10" fill="var(--paper)" stroke="var(--ink)" stroke-width="3.5" />
+        <rect x="18" y="16" width="84" height="52" rx="4" fill="currentColor" opacity=".35" />
+        <path d="M30 34l10 8-10 8M50 52h22" fill="none" stroke="var(--ink)" stroke-width="3.5" stroke-linecap="round"
+          stroke-linejoin="round" />
+        <path d="M44 78v14h32V78M30 98h60" stroke="var(--ink)" stroke-width="3.5" stroke-linecap="round" fill="none" />
+      </symbol>
+      <symbol id="bracket" viewBox="0 0 120 70"><text x="60" y="52" text-anchor="middle"
+          font-family="Bricolage Grotesque,sans-serif" font-weight="800" font-size="58" fill="currentColor"
+          stroke="var(--ink)" stroke-width="2">&lt;/&gt;</text></symbol>
+      <symbol id="stamp" viewBox="0 0 160 160">
+        <defs>
+          <path id="circ" d="M80 80m-58 0a58 58 0 1 1 116 0a58 58 0 1 1-116 0" />
+        </defs>
+        <circle cx="80" cy="80" r="74" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="3 6" />
+        <circle cx="80" cy="80" r="44" fill="none" stroke="currentColor" stroke-width="2.5" /><text
+          font-family="Bricolage Grotesque,sans-serif" font-weight="800" font-size="15" letter-spacing="3"
+          fill="currentColor">
+          <textPath href="#circ">open to work · let’s build something · </textPath>
+        </text><text x="80" y="91" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-weight="700"
+          font-size="30" fill="currentColor">{ }</text>
+      </symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="nav">
+    <a class="brand" href="#home" aria-label="Home"><span class="brand-mark"><img src="image/logo.png" alt="" width="36" height="36"></span><span class="brand-text">Ashique Jaman</span></a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu"
+      aria-label="Open menu"><span></span><span></span></button>
+    <nav id="menu" class="menu" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero-stickers" aria-hidden="true">
+        <svg class="st s-star float" data-depth="30" style="color:var(--lav)">
+          <use href="#bolt" />
+        </svg>
+        <svg class="st s-sparkle spin" data-depth="-20" style="color:var(--peri)">
+          <use href="#plus" />
+        </svg>
+        <svg class="st s-flower float slow" data-depth="40" style="color:var(--teal)">
+          <use href="#gear" />
+        </svg>
+        <svg class="st s-comp float" data-depth="-35" style="color:var(--peri)">
+          <use href="#computer" />
+        </svg>
+        <svg class="st s-clip" data-depth="15">
+          <use href="#clip" />
+        </svg>
+        <svg class="st s-arrow" data-depth="10">
+          <use href="#arrow" />
+        </svg>
+        <svg class="st s-stamp spin slow" data-depth="-25" style="color:var(--slate)">
+          <use href="#stamp" />
+        </svg>
+        <svg class="st s-bracket float" data-depth="25" style="color:var(--lav)">
+          <use href="#bracket" />
+        </svg>
+      </div>
+
+      <div class="hero-inner">
+        <p class="badge"><span class="dot"></span>Available for work · Currently learning</p>
+        <p class="hand hello">hi, I’m —</p>
+        <h1 class="name" aria-label="Ashique Jaman">
+          <span class="line l1"><span>Ashique</span></span>
+          <span class="line l2"><span>Jaman!<i class="period"></i></span></span>
+        </h1>
+        <p class="tagline">Engineering curiosity, embracing creativity — discovering what's possible.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#projects">See my projects</a>
+          <a class="btn ghost" href="#contact">Say hello</a>
+        </div>
+        <!-- <ul class="socials" aria-label="Social links">
+          <li><a href="https://github.com/lorem-ipsum">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/lorem-ipsum">LinkedIn</a></li>
+          <li><a href="https://">Instagram</a></li>
+          <li><a href="https://">Discord</a></li>
+        </ul> -->
+      </div>
+      <!-- PORTRAIT -->
+      <figure class="portrait">
+        <span class="portrait-tape" aria-hidden="true"></span>
+        <div class="portrait-paper">
+          <img src="image/main.jpg" alt="Portrait of Ashique Jaman">
+        </div>
+        <svg class="st pm-bolt float slow" style="color:var(--lav)" aria-hidden="true"><use href="#bolt"/></svg>
+        <svg class="st pm-plus spin slow" style="color:var(--teal)" aria-hidden="true"><use href="#plus"/></svg>
+        <svg class="st pm-squig" style="color:var(--slate)" aria-hidden="true"><use href="#squiggle"/></svg>
+        <span class="pm-dots" aria-hidden="true"></span>
+        <span class="pm-ring" aria-hidden="true"></span>
+        <svg class="st pm-arrow" aria-hidden="true"><use href="#arrow"/></svg>
+        <svg class="st pm-gear spin slow" style="color:var(--peri)" aria-hidden="true"><use href="#gear"/></svg>
+        <figcaption class="hand">that’s me!</figcaption>
+      </figure>
+      <p class="hand scroll-hint" aria-hidden="true">scroll, gently ↓</p>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
+      <div class="wrap about-grid">
+        <div class="about-head reveal">
+          <h2 class="h2">A little <em>about</em> me :D... </h2>
+          <p class="lede">I'm Ashique Jaman, a Computer Science student with a curiosity for technology and the mechanisms behind the things we use every day. I'm particularly fascinated by how software works behind the scenes, from applications and game development to the systems that power modern computing.</p>
+          
+          <p>Currently exploring different areas of computer science, I'm interested in understanding things beyond the surface, experimenting with new ideas, and gradually finding my place in this ever-evolving field.</p>
+
+          <p>Beyond technology, I enjoy photography, films, anime, travelling, discovering new places, and spending time with good people. Always curious, always learning, and working towards building an independent future.
+            </p>
+              <svg class="st a-squig" style="color:var(--teal)" aria-hidden="true">
+            <use href="#squiggle" />
+          </svg>
+        </div>
+
+        <div class="notes">
+          <article class="note n1 reveal"><svg class="tape" aria-hidden="true">
+              <use href="#clip" />
+            </svg>
+            <h3>University:</h3>
+            <p>Bhattadev University</p>
+          </article>
+          <article class="note n2 reveal">
+            <h3>Degree:</h3>
+            <p>BSc CSE (AI & DS)</p>
+          </article>
+          <article class="note n3 reveal">
+            <h3>Location:</h3>
+            <p>Barpeta Road, Assam</p>
+          </article>
+          <article class="note n4 reveal">
+            <h3>Current focus:</h3>
+            <p>Programming & Web Development</p><span class="hand">right now!</span>
+          </article>
+          <article class="note n5 reveal">
+            <h3>Interests:</h3>
+            <p>Software Development, Technology, Problem Solving</p><svg class="st n-star spin slow" style="color:var(--lav)"
+              aria-hidden="true">
+              <use href="#plus" />
+            </svg>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="skills" id="skills">
+      <div class="wrap">
+        <div class="reveal">
+          <h2 class="h2">Things I <em>work with</em></h2>
+          <p class="hand sub">Part of my growing toolkit</p>
+        </div>
+        <div class="shelf">
+          <div class="drawer reveal">
+            <h3>Programming Languages</h3>
+            <ul class="tags">
+              <li>C</li>
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>SQL</li>
+              <li>Java</li>
+            </ul>
+          </div>
+          <div class="drawer reveal">
+            <h3>Frontend Development</h3>
+            <ul class="tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Responsive Design</li>
+            </ul>
+          </div>
+          <div class="drawer reveal">
+            <h3>Backend Development</h3>
+            <ul class="tags">
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>MongoDB</li>
+              <li>MySQL</li>
+              <li>REST APIs</li>
+            </ul>
+          </div>
+          <div class="drawer reveal">
+            <h3>Tools and Technologies</h3>
+            <ul class="tags">
+              <li>VS Code</li>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Chrome DevTools</li>
+              <li>Git Bash</li>
+              <li>Figma</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <!-- <section class="projects" id="projects">
+      <div class="wrap">
+        <div class="reveal">
+          <h2 class="h2">Selected <em>projects</em></h2>
+          <p class="hand sub">three pieces, pinned to the board</p>
+        </div> -->
+
+        <!-- <div class="board">
+          <article class="proj p1 reveal">
+            <div class="shot" style="--c:var(--peri)"><span class="shot-label">Screenshot</span><svg aria-hidden="true">
+                <use href="#computer" />
+              </svg></div>
+            <div class="proj-body">
+              <h3>Project name one</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+              <ul class="tags small">
+                <li>Lorem</li>
+                <li>Ipsum</li>
+                <li>Dolor</li>
+              </ul>
+              <div class="links"><a href="https://github.com/lorem-ipsum/project-one">GitHub</a><a
+                  href="https://example.com">Live preview</a></div>
+            </div>
+            <svg class="st pin" style="color:var(--lav)" aria-hidden="true">
+              <use href="#bolt" />
+            </svg>
+          </article>
+
+          <article class="proj p2 reveal">
+            <div class="shot" style="--c:var(--teal)"><span class="shot-label">Screenshot</span><svg aria-hidden="true">
+                <use href="#bracket" />
+              </svg></div>
+            <div class="proj-body">
+              <h3>Project name two</h3>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+              <ul class="tags small">
+                <li>Sit amet</li>
+                <li>Elit</li>
+                <li>Tempor</li>
+              </ul>
+              <div class="links"><a href="https://github.com/lorem-ipsum/project-two">GitHub</a><a
+                  href="https://example.com">Live preview</a></div>
+            </div>
+            <svg class="st pin" style="color:var(--peri)" aria-hidden="true">
+              <use href="#gear" />
+            </svg>
+          </article>
+
+          <article class="proj p3 reveal">
+            <div class="shot" style="--c:var(--lav)"><span class="shot-label">Screenshot</span><svg aria-hidden="true">
+                <use href="#plus" />
+              </svg></div>
+            <div class="proj-body">
+              <h3>Project name three</h3>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+              <ul class="tags small">
+                <li>Magna</li>
+                <li>Aliqua</li>
+                <li>Veniam</li>
+              </ul>
+              <div class="links"><a href="https://github.com/lorem-ipsum/project-three">GitHub</a><a
+                  href="https://example.com">Live preview</a></div>
+            </div>
+            <svg class="st pin" style="color:var(--teal)" aria-hidden="true">
+              <use href="#plus" />
+            </svg>
+          </article>
+        </div> -->
+      <!-- </div>
+    </section> -->
+
+    <!-- ============ JOURNEY ============ -->
+    <section class="journey" id="journey">
+      <div class="wrap journey-grid">
+        <div class="reveal">
+          <h2 class="h2">The <em>journey</em> so far</h2>
+          <p class="hand sub">a dotted line through time</p>
+        </div>
+        <ol class="trail">
+          <li class="reveal"><span class="when">Academic year: 2010 - 2023</span>
+            <h3>School Education </h3>
+            <p>ST Mary's High School</p>
+          </li>
+          <li class="reveal"><span class="when">Academic year: 2023 - 2025</span>
+            <h3>Higher Secondary</h3>
+            <p>Assam Brilliant Academy</p>
+          </li>
+          <li class="reveal"><span class="when">Academic year: 2026 - present</span>
+            <h3>Undergraduate Studies</h3>
+            <p>Bhattadev University: B.Sc. CSE
+            with Specialization in Artificial Intelligence & Data Science</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="letter reveal">
+          <svg class="st l-stamp" style="color:var(--slate)" aria-hidden="true">
+            <use href="#stamp" />
+          </svg>
+          <svg class="st l-star float" style="color:var(--lav)" aria-hidden="true">
+            <use href="#bolt" />
+          </svg>
+          <h2 class="h2">Got an idea?  <em>Let's talk.</em> </h2>
+          <p class="lede">Have an interesting idea, want to collaborate or simply want to connect? My inbox is always open. Write to me and I’ll write back.</p>
+          <a class="btn primary big" href="mailto:jamanashique7@gmail.com">jamanashique7@gmail.com</a>
+          <!-- <ul class="socials">
+            <li><a href="https://github.com/jamanashique-cmd">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/ashique-jaman-504006342">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/ajm_hoover">Instagram</a></li>
+            <li><a href="https://discord.com/users/ashman2005">Discord</a></li>
+          </ul> -->
+          <ul class="socials">
+          <li><a href="https://github.com/jamanashique-cmd"><img src="image/github.jpg" alt="" width="20" height="20">GitHub</a></li>
+          <li><a href="https://linkedin.com/in/ashique-jaman-504006342"><img src="image/linkedin.jpg" alt="" width="20" height="20">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/ajm_hoover"><img src="image/insta.jpg" alt="" width="20" height="20">Instagram</a></li>
+          <li><a href="https://discord.com/users/ashman2005"><img src="image/discord.jpg" alt="" width="20" height="20">Discord</a></li>
+        </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <span class="brand-mark"><img src="image/logo.png" alt="" width="36" height="36"></span>
+    <p>© <span id="year">2026</span> Ashique Jaman. All rights reserved.</p>
+    <ul class="socials">
+      <!-- <li><a href="https://github.com/jamanashique-cmd">GitHub</a></li>
+      <li><a href="https://linkedin.com/in/ashique-jaman">LinkedIn</a></li> -->
+    </ul>
+    <svg class="st f-flower spin slow" style="color:var(--peri)" aria-hidden="true">
+      <use href="#gear" />
+    </svg>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
